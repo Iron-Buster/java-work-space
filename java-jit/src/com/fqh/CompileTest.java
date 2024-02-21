@@ -20,6 +20,8 @@ public class CompileTest {
      * VM参数：-XX:+PrintCompilation 打印编译日志
      */
     public static void test1() {
+        // Q: 为什么Java代码越执行越快
+        // A: JIT对Java代码的优化，会将一些热点代码缓存起来。
         long time1 = System.nanoTime();
         long count1 = 0;
         for (int i = 0; i < 10000; i++) {
