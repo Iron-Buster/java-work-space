@@ -24,6 +24,15 @@ public class TestJavaOOPS {
         System.out.println("a.hashcode: " + a.hashCode());
         System.out.println("b.hashcode: " + b.hashCode());
         System.out.println("------After call hashcode------\n" + ClassLayout.parseInstance(a).toPrintable() + "\n" + ClassLayout.parseInstance(b).toPrintable());
+
+
+        // 这几个字符串的hashcode是 -2147483648
+        System.out.println("polygenelubricants".hashCode());
+        System.out.println("GydZG_".hashCode());
+        System.out.println("DESIGNING WORKHOUSES".hashCode());
+        final int MOD = 1000000007;
+        System.out.println(("GydZG_".hashCode() % MOD + MOD) % MOD);
+
     }
 
     //A没有覆盖默认的 hashcode 方法
